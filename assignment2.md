@@ -113,7 +113,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request   PUT                               \
            --header    "Content-Type: application/json"  \
-           --write-out "%{http_code}\n"                  \
+           --write-out "\n%{http_code}\n"                  \
            --data      '{"value": "sampleValue"}'        \
            http://127.0.0.1:13800/kvs/sampleKey
 
@@ -127,7 +127,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request   PUT                               \
            --header    "Content-Type: application/json"  \
-           --write-out "%{http_code}\n"                  \
+           --write-out "\n%{http_code}\n"                  \
            --data      '{}'                              \
            http://127.0.0.1:13800/kvs/sampleKey
 
@@ -141,7 +141,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request   PUT                               \
            --header    "Content-Type: application/json"  \
-           --write-out "%{http_code}\n"                  \
+           --write-out "\n%{http_code}\n"                  \
            --data      '{"value": "sampleValue"}'        \
            http://127.0.0.1:13800/kvs/6TLxbmwMTN4hX7L0QX5NflWH0QKfrTlzcuM5PUQHS52lCizKbEM
 
@@ -159,7 +159,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request   PUT                               \
            --header    "Content-Type: application/json"  \
-           --write-out "%{http_code}\n"                  \
+           --write-out "\n%{http_code}\n"                  \
            --data      '{"value": "updatedValue"}'       \
            http://127.0.0.1:13800/kvs/sampleKey
 
@@ -173,7 +173,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request   PUT                               \
            --header    "Content-Type: application/json"  \
-           --write-out "%{http_code}\n"                  \
+           --write-out "\n%{http_code}\n"                  \
            --data      '{}'                              \
            http://127.0.0.1:13800/kvs/sampleKey
 
@@ -197,7 +197,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request   PUT                               \
            --header    "Content-Type: application/json"  \
-           --write-out "%{http_code}\n"                  \
+           --write-out "\n%{http_code}\n"                  \
            --data      '{"value": "sampleValue"}'        \
            http://127.0.0.1:13800/kvs/sampleKey
 
@@ -206,7 +206,7 @@ CSE 138: Distributed Systems
 
     $ curl --request GET                             \
            --header "Content-Type: application/json" \
-           --write-out "%{http_code}\n"              \
+           --write-out "\n%{http_code}\n"              \
            http://127.0.0.1:13800/kvs/sampleKey
 
     {"doesExist":true,"message":"Retrieved successfully","value":"sampleValue"}
@@ -214,7 +214,7 @@ CSE 138: Distributed Systems
 
     $ curl --request   PUT                              \
            --header    "Content-Type: application/json" \
-           --write-out "%{http_code}\n"                 \
+           --write-out "\n%{http_code}\n"                 \
            --data      '{"value": "updatedValue"}'      \
            http://127.0.0.1:13800/kvs/sampleKey
 
@@ -223,7 +223,7 @@ CSE 138: Distributed Systems
 
     $ curl --request GET                             \
            --header "Content-Type: application/json" \
-           --write-out "%{http_code}\n"              \
+           --write-out "\n%{http_code}\n"              \
            http://127.0.0.1:13800/kvs/sampleKey
 
     {"doesExist":true,"message":"Retrieved successfully","value":"updatedValue"}
@@ -236,7 +236,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request GET                             \
            --header "Content-Type: application/json" \
-           --write-out "%{http_code}\n"              \
+           --write-out "\n%{http_code}\n"              \
            http://127.0.0.1:13800/kvs/sampleKey
 
     {"doesExist":false,"error":"Key does not exist","message":"Error in GET"}
@@ -253,7 +253,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request DELETE                          \
            --header "Content-Type: application/json" \
-           --write-out "%{http_code}\n"              \
+           --write-out "\n%{http_code}\n"              \
            http://127.0.0.1:13800/kvs/sampleKey
 
     {"doesExist":true,"message":"Deleted successfully"}
@@ -266,7 +266,7 @@ CSE 138: Distributed Systems
 ```bash
     $ curl --request DELETE                          \
            --header "Content-Type: application/json" \
-           --write-out "%{http_code}\n"              \
+           --write-out "\n%{http_code}\n"              \
            http://127.0.0.1:13800/kvs/sampleKey
 
     {"doesExist":false,"error":"Key does not exist","message":"Error in DELETE"}
